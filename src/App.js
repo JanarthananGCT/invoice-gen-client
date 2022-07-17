@@ -27,12 +27,12 @@ function App() {
         token = "";
       }
       const tokenResponse = await axios.post(
-        "http://localhost:5000/users/tokenIsValid",
+        "https://invoice-generator-using-mern.herokuapp.com/users/tokenIsValid",
         null,
         { headers: { "x-auth-token": token } }
       );
       if (tokenResponse.data) {
-        const userRes = await axios.get("http://localhost:5000/users/", {
+        const userRes = await axios.get("https://invoice-generator-using-mern.herokuapp.com/users/", {
           headers: { "x-auth-token": token },
         });
         setUserData({

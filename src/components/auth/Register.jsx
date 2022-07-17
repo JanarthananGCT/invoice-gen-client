@@ -32,9 +32,9 @@ function Register() {
 
     try {
       const newUser = { email, password, passwordCheck, displayName, Account_number , IFSC_CODE ,Name };
-      await axios.post("http://localhost:5000/users/register", newUser);
+      await axios.post("https://invoice-generator-using-mern.herokuapp.com/users/register", newUser);
       const loginResponse = await axios.post(
-        "http://localhost:5000/users/login",
+        "https://invoice-generator-using-mern.herokuapp.com/users/login",
         {
           email,
           password,
